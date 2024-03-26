@@ -2,9 +2,9 @@ import test from "node:test";
 import { App, FuzzySuggestModal, Modal, Notice, Setting } from "obsidian";
 import { stringify } from "querystring";
 //TODO: Modal that receives one word, shows it asks for translation and return pair of words. made some testing changes
-//TODO: Add testing to do to the main branch
+
 export class NewWordModal extends Modal {
-  result: string;
+  result: string; 
   word : string;
   onSubmit: (result: string) => void;
 
@@ -37,6 +37,8 @@ export class NewWordModal extends Modal {
           }));
     this.scope.register([],'Enter', (evt : KeyboardEvent)=>{
         if(evt.isComposing) return
+        evt.preventDefault()
+        evt.stopPropagation()
         const actionButton = document.getElementsByClassName("mod-cta")
         .item(0) as HTMLButtonElement | null;
         actionButton?.click()

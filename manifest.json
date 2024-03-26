@@ -1,11 +1,9 @@
 {
 	"id": "Hello World",
-	"name": "Hello Name World",
+	"name": "EnglishDiary",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "Easily create new files for English lesson, add new words to a dictionary and monitor you stats",
+	"author": "hellwind2019",
 	"isDesktopOnly": false
 }
