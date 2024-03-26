@@ -1,7 +1,7 @@
 import test from "node:test";
 import { App, FuzzySuggestModal, Modal, Notice, Setting } from "obsidian";
 import { stringify } from "querystring";
-//TODO: Modal that receives one word, shows it asks for translation and return pair of words.
+//TODO: Modal that receives one word, shows it asks for translation and return pair of words. made some testing changes
 export class NewWordModal extends Modal {
   result: string;
   word : string;
