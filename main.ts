@@ -1,12 +1,12 @@
 import { AddNewWordCommand } from "commands/commands";
 import { link } from "fs";
 
-import { NewWordModal, SuggestModalTest } from "modals/modal";
+import { NewWordModal } from "modals/modal";
 import { App, Editor, MarkdownView, Modal, Plugin, Setting, Vault, Notice, FuzzySuggestModal, TFile } from "obsidian";
 import * as internal from "stream";
 import { addNewLineToFile } from "utils/fsUtils";
 export default class EnglishDiaryPlugin extends Plugin {
-    settings: MyPluginSettings
+    settings: EnglishDiarySettings
 
     async onload() { //Runs when user enables plugin
         console.log("Load");
@@ -67,7 +67,7 @@ function initFolders(plugin: EnglishDiaryPlugin) {
 
     }
 }
-interface MyPluginSettings {
+interface EnglishDiarySettings {
     rootPath: string;
     lessonsPath: string;
     fullDiaryPath: string;
@@ -75,7 +75,7 @@ interface MyPluginSettings {
     statsPath: string;
 }
 const DEFAULT_ROOT: string = "EnglishDiary"
-const DEFAULT_SETTINGS: MyPluginSettings = {
+const DEFAULT_SETTINGS: EnglishDiarySettings = {
     rootPath: DEFAULT_ROOT,
     lessonsPath: DEFAULT_ROOT + '/Lessons',
     fullDiaryPath: DEFAULT_ROOT + '/FullDiary.md',
