@@ -1,9 +1,9 @@
 {
 	"id": "english-diary",
-	"name": "EnglishDiary",
+	"name": "English Diary",
 	"version": "0.0.1",
 	"minAppVersion": "0.15.0",
-	"description": "Easily create new files for English lesson, add new words to a dictionary and monitor you, stats",
+	"description": "Easily create new files for English lesson, add new words to a dictionary and monitor your stats",
 	"author": "hellwind2019",
 	"isDesktopOnly": false
 }
